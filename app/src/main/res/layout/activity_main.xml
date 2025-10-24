@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_scrollview" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/villarreal_bg_cream" tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_stadion"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/stadion_villarreal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo_background"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/logo_shadow_bg"
+            app:layout_constraintBottom_toBottomOf="@id/iv_stadion"
+            app:layout_constraintTop_toTopOf="@id/iv_stadion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_club"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@id/iv_stadion"
+            app:layout_constraintTop_toTopOf="@id/iv_stadion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_club_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Villarreal CF"
+            android:textColor="@color/villarreal_yellow"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:elevation="4dp"
+            android:background="#9900205B"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_stadion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tv_profile_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Villarreal Club de Fútbol, S.A.D. (bahasa Valensia: Vila-real Club de Futbol, S.A.D.), umumnya disingkat menjadi Villarreal CF atau hanya Villarreal, adalah sebuah klub sepak bola profesional yang berbasis di Villarreal, Spanyol. Klub ini bermain dalam La Liga, kompetisi sepak bola liga tertinggi dalam sepak bola di Spanyol."
+                android:lineSpacingMultiplier="1.2" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/card_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp">
+
+            <include
+                android:id="@+id/nav_history"
+                layout="@layout/layout_menu" />
+
+            <include
+                android:id="@+id/nav_coach"
+                layout="@layout/layout_menu" />
+
+            <include
+                android:id="@+id/nav_squad"
+                layout="@layout/layout_menu" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

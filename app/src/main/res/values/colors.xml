@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="villarreal_blue_dark">#00205B</color>
+    <color name="villarreal_yellow">#FEE500</color>
+    <color name="villarreal_bg_cream">#FFFFF0</color>
+    <color name="text_primary">#212121</color>
+
+    <color name="player_yellow">#FFEB3B</color>
+    <color name="player_blue">#2196F3</color>
+    <color name="player_green">#4CAF50</color>
+    <color name="player_red">#F44336</color>
+</resources>
